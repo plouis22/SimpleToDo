@@ -20,6 +20,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val addTaskField = findViewById<EditText>(R.id.add_task_field)
+
 
         val longClickListener = object : TaskItemAdapter.OnLongClickListener{
             override fun onItemLongClicked(position: Int) {
@@ -32,9 +34,10 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+
         loadItems()
 
-        val addTaskField = findViewById<EditText>(R.id.add_task_field)
+
         //
        val taskViews = findViewById<RecyclerView>(R.id.list_of_taskView)
         //
@@ -57,6 +60,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
     //save data for app by writing and reading from file
+
 
     //Get
 
